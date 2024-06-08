@@ -1,8 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+*{
+  font-family: "Poppins", arial, "roboto";
+}
+
 html
 body{
   background-color: #fafafa;
 }
 
+main{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  gap: 20px;
+  padding: 20px;
+}
+
+
+/*header / cabeçalho*/
+
+/*Imagens / Imagem*/
+.logo {
+  width: 90px;
+  height: 90px;
+  margin-left: 20px;
+}
+
+.navbar .perfil .imgCx1{
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 20px;
+ }
+ .navbar .carteira .imgCx2{
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+ }
+ .navbar .perfil .imgCx1 img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+ }
+ .navbar .carteira .imgCx2 img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#iconePesquisa {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  padding: 10px;
+ }
+
+
+
+/*Principal*/
 .navbar {
     background-color: #fff;
     padding: 20px;
@@ -10,7 +77,8 @@ body{
     justify-content: space-between;
     align-items: center;
   }
-  
+
+/*Parte de pesquisa / input texto*/  
   .pesquisaPai {
     display: flex;
     align-items: center;
@@ -18,12 +86,9 @@ body{
     background: color #000006;;
     width:400px;
     margin: 20px auto;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 5px 10px;
     color: #4b4b4b;
-   /* max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;*/
   }
   #pesquisaInput{
     padding: 8px;
@@ -32,60 +97,9 @@ body{
     background-color: transparent;
     width:100%;
   }
-  .nav-left{
-    list-style:none;
-    float:right;
-    }
-
-  .iconeTop{
-    border:1px solid #c0c0c0;
-      border-radius: 50%;
-      margin: 3px;
-  }
-  .iconeTop1:hover{
-    border:1px solid black;
-      border-radius: 50%;
-  }
-  .nav-left li{
-      position:relative;
-      float:left;
-      }
-  .nav-left li a{
-    color:#333; 
-    text-decoration:none; 
-    padding:5px 10px; 
-    display:block;
-  }
-
-  .nav-left .dropItens:hover{
-    background:#333;
-    color:#fff;
-  }
-
-  .nav-left li ul{
-        position:absolute;
-        background-color:#fff;
-        display:none;
-        }
-  .nav-left li:hover ul, .nav-left li.over ul{
-    display:block;
-  }
-  .nav-left li ul li{
-    border:1px solid #c0c0c0;
-    display:block;
-    width:150px;
-    }
-    .dropDown{
-      display: flex;
-      align-items: flex-start;
-      justify-items: left;
-      align-content: left;
-    }
- 
-  input[type="text"] {
+   input[type="text"] {
     outline: none;
-  }
-  
+  } 
   .search-form {
     display: flex;
     align-items: center;
@@ -104,79 +118,21 @@ body{
     cursor: pointer;
     background-color: transparent;
   }
-  
-  .logo {
-    width: 90px;
-    height: 90px;
-    margin-left: 20px;
-  }
   nav ul li {
     list-style: none;
   }
-  #iconePesquisa {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    padding: 10px;
-    
-   }
-   .iconeTop:hover{
-    background-color: #000000;
-    border-radius: 50%;
-    color: #fff;
-   }
-
-   .navbar .perfil .imgCx1{
-    position: relative;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    margin: 20px;
-   }
-   .navbar .carteira .imgCx2{
-    position: relative;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-   }
-   .navbar .perfil .imgCx1 img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    overflow: hidden;
-   }
-   .navbar .carteira .imgCx2 img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+   
+   /*Menu / dropdown*/
   .navbar .menu{
     position: absolute;
-    top: calc(100% + 10px);
-    right: 170px;
+    top: calc(100% + -15%);
+    right: 50px;
     width: 200px;
     min-height: 100px;
     background: #fff;
     user-select: none;
     opacity: 0;
     visibility: hidden;
-  }
-  .navbar .menu::before{
-    content: '';
-    position: absolute;
-    top: -5px;
-    right: 0;
-    width: 20px;
-    height: 20px;
-    background: #fff;
-    z-index: -1;
-    transform: rotate(45deg);
   }
 
   .navbar .menu ul{
@@ -206,6 +162,67 @@ body{
   .navbar .menu.ativo{
     opacity: 1;
     visibility: visible;
+    z-index: 999;
+  }
+
+  /* Duvidas frequentes */
+  .accordion{
+    width: 300px;
+    max-height: 400px;
+    text-align: center;
+  }
+  
+  /* Visão geral */
+  .visaoGeral{
+    text-align: start;
+  }
+
+  .card-body{
+    height: 400px;
+  }
+  .cardPai{
+    max-height: 500px;
+  }
+  .card-body{
+    padding: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: max-content;
+    justify-content: center;
+    gap: 50px;
+  }
+  .cardPai .card-body .card-lucro{
+    background-color: black;
+    color: #fff;
+    width: 203px;
+    height: 75px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .cardPai .card-body .card-perda{
+    background-color: #fff;
+    color: black;
+    width: 203px;
+    height: 75px;
+    padding: 10px;
+    border: solid 1px #E8E8E8;
+    border-radius: 10px;
+  }
+
+  /* card direita, boedas alta, estatisticas */
+  .cardDireita{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+  
+
+  }
+  .moedasAlta{
+    max-height: 230px;
+    max-width: max-content;
+  }
+  .status{
+    max-height: 230px;
+    max-width: max-content;
   }
 
 
@@ -225,4 +242,55 @@ body{
     }
   }
 
-  
+  /* botoes */
+button {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 0.625rem;
+  cursor: pointer;
+}
+
+/* botao light */
+#btlight {
+  background: #ededed;
+  color: #121212;
+}
+
+/* botao dark */
+#btdark {
+  background-color: #263238;
+  color: #fff;
+}
+
+/* articles com a class box */
+.box {
+  padding: 0.625rem;
+  border-radius: 8px;
+}
+
+/* Estilos para serem usados via JS */
+.light {
+  background: #fff;
+  color: #191919;
+}
+
+.dark {
+  background: #222;
+  color: #fff;
+}
+
+.azul {
+  background: #1a237e;
+  color: #fff;
+}
+
+.escura {
+  background: #333;
+  color: #fff;
+  border-radius: 5px;
+  padding: 0.625rem;
+}
+.amarelo {
+  background: #ffc107;
+  color: #fff;
+}
