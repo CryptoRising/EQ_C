@@ -10,13 +10,19 @@ html
 body{
   background-color: #fafafa;
 }
+section{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
 
 main{
   display: flex;
   flex-wrap: wrap;
-  max-width: 100%;
   gap: 20px;
-  padding: 20px;
+  padding: 10px;
+  justify-items: center;
 }
 
 
@@ -95,7 +101,7 @@ main{
     border: none;
     outline: none;
     background-color: transparent;
-    width:100%;
+    width: 0%;
   }
    input[type="text"] {
     outline: none;
@@ -211,10 +217,9 @@ main{
 
   /* card direita, boedas alta, estatisticas */
   .cardDireita{
-    display: grid;
-    grid-template-columns: 2fr 2fr;
-  
-
+    display: flex;
+    flex-direction:column;
+    gap: 10px;
   }
   .moedasAlta{
     max-height: 230px;
@@ -227,9 +232,20 @@ main{
 
 
   /* Responsividade */
+  
   @media (max-width: 768px) {
+    .logo{
+      width: 45px;
+    }
+    .perfil{
+      width: 45px;
+    }
+    #pesquisaInput{
+      width: 50%;
+    }
     .navbar {
       flex-direction: column;
+      width: 100%;
     }
     .nav-left {
       flex-direction: column;
