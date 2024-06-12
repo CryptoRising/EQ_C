@@ -33,6 +33,7 @@ main{
   width: 90px;
   height: 90px;
   margin-left: 20px;
+  margin-right: 5px;
 }
 
 .navbar .perfil .imgCx1{
@@ -77,11 +78,16 @@ main{
 
 /*Principal*/
 .navbar {
-    background-color: #fff;
+    background-color: transparent;
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .container {
+    max-width: 100% !important;
+    margin: 0 20px;
   }
 
 /*Parte de pesquisa / input texto*/  
@@ -177,10 +183,22 @@ main{
     max-height: 400px;
     text-align: center;
   }
+
+  .duvidasFrequentesText {
+    width: 100%;
+    margin-bottom: -25px;
+    text-align: center;
+  }
   
+  /* Duvidas frequentes e visão geral */
+  .duvidasGeral{
+    width: 100%;
+    display: flex;
+  }
+
   /* Visão geral */
   .visaoGeral{
-    text-align: start;
+    text-align: center;
   }
 
   .card-body{
@@ -218,30 +236,48 @@ main{
   /* card direita, boedas alta, estatisticas */
   .cardDireita{
     display: flex;
-    flex-direction:column;
-    gap: 10px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 300px;
+    gap: 20px;
+    flex-wrap: wrap;
   }
   .moedasAlta{
+    margin-top: -20px;
     max-height: 230px;
     max-width: max-content;
+  }
+  .moedasAltaText {
+    width: 100%;
+    text-align: center;
   }
   .status{
     max-height: 230px;
     max-width: max-content;
   }
 
-
   /* Responsividade */
-  
+
+  @media (max-width: 899px) {
+    .pesquisaPai {
+      width: 300px;
+    }
+    .cardPai {
+      margin: 0 auto;
+    }
+  }
+
+  #pesquisaInput{
+    width: 50%;
+  }
+
   @media (max-width: 768px) {
     .logo{
-      width: 45px;
+      width: 75px;
     }
     .perfil{
       width: 45px;
-    }
-    #pesquisaInput{
-      width: 50%;
     }
     .navbar {
       flex-direction: column;
@@ -251,9 +287,6 @@ main{
       flex-direction: column;
     }
     .search-form {
-      margin-top: 20px;
-    }
-    .logo {
       margin-top: 20px;
     }
   }
