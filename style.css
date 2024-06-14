@@ -1,16 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+*{
+  font-family: "Poppins", arial, "roboto";
+}
+
 html
 body{
   background-color: #fafafa;
 }
+section{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
 
+main{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px;
+  justify-items: center;
+}
+
+/* Variavel de cores */
+:root{
+  --color-neutral-0: #0c0c0c;
+  --color-neutral-10: #171717;
+  --color-neutral-30: #a8a29c;
+  --color-neutral-40: #f5f5f5;
+}
+
+
+/*header / cabeçalho*/
+
+/*Imagens / Imagem*/
+.logo {
+  width: 90px;
+  height: 90px;
+  margin-left: 20px;
+  margin-right: 5px;
+}
+
+.navbar .perfil .imgCx1{
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 20px;
+ }
+ .navbar .carteira .imgCx2{
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+ }
+ .navbar .perfil .imgCx1 img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+ }
+ .navbar .carteira .imgCx2 img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#iconePesquisa {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  padding: 10px;
+ }
+
+#divCentral{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#imgCentral{
+  width: 40%;
+}
+
+
+
+
+/*Principal*/
 .navbar {
-    background-color: #fff;
+    background-color: transparent;
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  
+
+  .container {
+    max-width: 100% !important;
+    margin: 0 20px;
+  }
+
+/*Parte de pesquisa / input texto*/  
   .pesquisaPai {
     display: flex;
     align-items: center;
@@ -18,74 +118,20 @@ body{
     background: color #000006;;
     width:400px;
     margin: 20px auto;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 5px 10px;
     color: #4b4b4b;
-   /* max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;*/
   }
   #pesquisaInput{
     padding: 8px;
     border: none;
     outline: none;
     background-color: transparent;
-    width:100%;
+    width: 0%;
   }
-  .nav-left{
-    list-style:none;
-    float:right;
-    }
-
-  .iconeTop{
-    border:1px solid #c0c0c0;
-      border-radius: 50%;
-      margin: 3px;
-  }
-  .iconeTop1:hover{
-    border:1px solid black;
-      border-radius: 50%;
-  }
-  .nav-left li{
-      position:relative;
-      float:left;
-      }
-  .nav-left li a{
-    color:#333; 
-    text-decoration:none; 
-    padding:5px 10px; 
-    display:block;
-  }
-
-  .nav-left .dropItens:hover{
-    background:#333;
-    color:#fff;
-  }
-
-  .nav-left li ul{
-        position:absolute;
-        background-color:#fff;
-        display:none;
-        }
-  .nav-left li:hover ul, .nav-left li.over ul{
-    display:block;
-  }
-  .nav-left li ul li{
-    border:1px solid #c0c0c0;
-    display:block;
-    width:150px;
-    }
-    .dropDown{
-      display: flex;
-      align-items: flex-start;
-      justify-items: left;
-      align-content: left;
-    }
- 
-  input[type="text"] {
+   input[type="text"] {
     outline: none;
-  }
-  
+  } 
   .search-form {
     display: flex;
     align-items: center;
@@ -104,79 +150,21 @@ body{
     cursor: pointer;
     background-color: transparent;
   }
-  
-  .logo {
-    width: 90px;
-    height: 90px;
-    margin-left: 20px;
-  }
   nav ul li {
     list-style: none;
   }
-  #iconePesquisa {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    padding: 10px;
-    
-   }
-   .iconeTop:hover{
-    background-color: #000000;
-    border-radius: 50%;
-    color: #fff;
-   }
-
-   .navbar .perfil .imgCx1{
-    position: relative;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    margin: 20px;
-   }
-   .navbar .carteira .imgCx2{
-    position: relative;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-   }
-   .navbar .perfil .imgCx1 img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    overflow: hidden;
-   }
-   .navbar .carteira .imgCx2 img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+   
+   /*Menu / dropdown*/
   .navbar .menu{
     position: absolute;
-    top: calc(100% + 10px);
-    right: 170px;
+    top: calc(100% + -15%);
+    right: 50px;
     width: 200px;
     min-height: 100px;
     background: #fff;
     user-select: none;
     opacity: 0;
     visibility: hidden;
-  }
-  .navbar .menu::before{
-    content: '';
-    position: absolute;
-    top: -5px;
-    right: 0;
-    width: 20px;
-    height: 20px;
-    background: #fff;
-    z-index: -1;
-    transform: rotate(45deg);
   }
 
   .navbar .menu ul{
@@ -206,13 +194,218 @@ body{
   .navbar .menu.ativo{
     opacity: 1;
     visibility: visible;
+    z-index: 999;
+  }
+
+  /* Duvidas frequentes */
+  .accordion{
+    width: 300px;
+    max-height: 400px;
+    text-align: center;
+  }
+
+  .duvidasFrequentesText {
+    width: 100%;
+    margin-bottom: -25px;
+    text-align: center;
+  }
+  
+  /* Duvidas frequentes e visão geral */
+  .duvidasGeral{
+    width: 100%;
+    display: flex;
+  }
+
+  /* Visão geral */
+  .visaoGeral{
+    text-align: center;
+  }
+
+  .card-body{
+    height: 400px;
+  }
+  .cardPai{
+    max-height: 500px;
+  }
+  .card-body{
+    padding: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: max-content;
+    justify-content: center;
+    gap: 50px;
+  }
+  .cardPai .card-body .card-lucro{
+    background-color: #ACFAD5;
+    color: black;
+    width: 203px;
+    height: 75px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .cardPai .card-body .card-perda{
+    background-color: #E7191F;
+    color: white;
+    width: 203px;
+    height: 75px;
+    padding: 10px;
+    border: solid 1px #E7191F;
+    border-radius: 10px;
+  }
+
+  /* card direita, Moedas alta, estatisticas */
+  .cardDireita{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 300px;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .moedasAlta{
+    margin-top: -20px;
+    max-height: 230px;
+    max-width: max-content;
+  }
+  .moedasAltaText {
+    width: 100%;
+    text-align: center;
+  }
+  .status{
+    max-height: 230px;
+    max-width: max-content;
+  }
+
+/* Footer / roda pé */
+  footer{
+    width: 100%;
+    color: var(--color-neutral-40);
+  }
+  .footerLink{
+    text-decoration: none;
+  }
+  #imgFooter{
+    width: 30px;
+  }
+  #footerContent{
+    background-color: var(--color-neutral-10);
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 3rem 3.5rem;
+  }
+ 
+  #footerContatos h1{
+    margin-bottom: 0.75rem;
+  }
+  
+  #footerRedesSociais{
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+
+  #footerRedesSociais .footerLink{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    color: var(--color-neutral-40);
+    border-radius: 50%;
+    transition: all 0.4s;
+  }
+  #footerRedesSociais .footerLink :hover{
+    opacity: 0.8;
+  }
+  #footerRedesSociais .footerLink i {
+    font-size: 1.5rem;
+  }
+  #instagram{
+    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+  }
+
+  #facebook{
+    background: #4267b3;
+  }
+
+  #whatsapp{
+    background: #25d366;
+  }
+  #email{
+    background: #fafafa;
+  }
+  #email i{
+    color: #000000;
+  }
+
+  .footerList{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+  }
+  
+  .footerList .footerLink{
+    color: var(--color-neutral-30);
+    transition: all 0.4s;
+  }
+
+  .footerList .footerLink:hover{
+    color: #7f37c9;
+  }
+
+  #footerCopytight{
+    width: 30%;
+    justify-content: center;
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    color: #2b134b;
+    background: #00ff88;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0px 10px 40px -12px #00ff8052;
   }
 
 
   /* Responsividade */
+  @media screen and (max-width: 768px) {
+    #footerContent{
+      grid-template-columns: repeat(2,1fr);
+      gap: 2rem;
+    }
+    
+  }
+  @media screen and (max-width: 426px) {
+    #footerContent{
+      grid-template-columns: repeat(1,1fr);
+      padding: 3rem 2rem;
+    }
+    
+  }
+  @media (max-width: 899px) {
+    .pesquisaPai {
+      width: 300px;
+    }
+    .cardPai {
+      margin: 0 auto;
+    }
+  }
+
+  #pesquisaInput{
+    width: 50%;
+  }
+
   @media (max-width: 768px) {
+    .logo{
+      width: 75px;
+    }
+    .perfil{
+      width: 45px;
+    }
     .navbar {
       flex-direction: column;
+      width: 100%;
     }
     .nav-left {
       flex-direction: column;
@@ -220,9 +413,4 @@ body{
     .search-form {
       margin-top: 20px;
     }
-    .logo {
-      margin-top: 20px;
-    }
   }
-
-  
